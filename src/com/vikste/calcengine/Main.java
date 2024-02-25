@@ -7,20 +7,25 @@ public class Main {
         double result = 0.0d;
         char opCode = 'a';
 
-        if (opCode == 'a')
+        switch(opCode) {
+        case 'a':
             result = value1 + value2;
-        else if (opCode == 's')
+            break;
+        case 's':
             result = value1 - value2;
-        else if (opCode == 'm')
+            break;
+        case 'm':
             result = value1 * value2;
-        else if (opCode == 'd') {
+            break;
+        case 'd':
             if (value2 != 0)
-            result = value1 / value2;
-        }
-        else {
+                result = value1 / value2;
+            break;
+        default:
             System.out.println("Invalid opCode: " + opCode);
             result = 0.0d;
+            break;
         }
         System.out.println(result);
-        }
+    }
 }
