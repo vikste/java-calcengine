@@ -13,11 +13,14 @@ public class Main {
             result = value1 - value2;
         else if (opCode == 'm')
             result = value1 * value2;
-        else if (opCode == 'd')
+        else if (opCode == 'd') {
+            if (value2 != 0)
             result = value1 / value2;
-        else
+        }
+        else {
+            System.out.println("Invalid opCode: " + opCode);
             result = 0.0d;
-        
+        }
         System.out.println(result);
         }
 }
